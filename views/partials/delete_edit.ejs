@@ -1,0 +1,14 @@
+<div class="d-flex">
+    <div class="mr-3">
+        <a target="_blank" href="<%-cohort.image_url%>" class="btn btn-primary">Image</a>
+    </div>
+    <div class="mx-3">
+        <a href="/super_team_picker/<%-cohort.id%>/edit" class="btn btn-warning">Edit</a>
+    </div>
+    <div class="mr-3">
+        <form action="/super_team_picker/<%-cohort.id%>" method="POST">
+            <input type="hidden" name="_method" value="DELETE">
+            <button type="submit" class="btn btn-danger">Delete</button>
+        </form>
+    </div>
+</div>

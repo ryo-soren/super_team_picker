@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Team Picker</title>
+    <link rel="stylesheet" href="/bootstrap.min.css">
+    <script src="/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+    <nav class="navbar navbar-light text-primary mt-2">
+        <a class="navbar-brand text-primary mx-4" href="/super_team_picker">Super Team Picker</a>
+      
+        <div id="navbarSupportedContent">
+          <ul class="list-inline center mx-4">
+            <li class="list-inline-item">
+              <a class="nav-link" href="/super_team_picker">Home</a>
+            </li>
+            <% if (username) { %>            
+              <li class="list-inline-item">
+                <a class="nav-link" href="/super_team_picker/index">Cohorts</a>
+              </li>
+              <li class="list-inline-item">
+                <a class="nav-link" href="/super_team_picker/new">New Cohort</a>
+              </li>
+            <% } %>
+          </ul>
+        </div>
+      </nav>

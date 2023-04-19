@@ -1,0 +1,45 @@
+<div class="card-body">
+    <form action="/super_team_picker/<%-cohort.id%>/split_teams" method="get">
+        <h6 class="card-title mb-4">Method</h6>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" value="team_count" name="teamMethod" id="teamMethod1">
+            <label class="form-check-label" for="teamMethod1">
+            Team Count
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" value="number_per_team" name="teamMethod" id="teamMethod2">
+            <label class="form-check-label" for="teamMethod2">
+            Number Per Team
+            </label>
+        </div>
+        <div>
+            <h6 class="card-title my-3">Quantity</h6>
+            <input type="text" class="form-control w-100 mb-2" name="quantity" id="quantity" required3>
+            <button type="submit" class="btn btn-outline-primary w-100 my-">Assign Teams</button>
+        </div>
+    </form>
+    <% if (memberSplit) { %>
+        <div class="m-3 d-flex">
+            <div class="m-3">
+                <strong>#</strong>
+            </div>
+
+            <div class="m-3">
+                <strong>Members</strong>
+            </div>
+        </div> 
+    <% } %>
+    <% for( let i = 0; i < memberSplit.length; i++ ) { %>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item d-flex">
+                <div class="m-3">
+                    <strong><%-i + 1%> </strong>
+                </div>
+                <div class="m-3">
+                    <%-memberSplit[i].join(", ")%>
+                </div>
+            </li>
+        </ul>
+    <% } %>
+</div>

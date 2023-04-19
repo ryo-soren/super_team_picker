@@ -1,0 +1,31 @@
+  <div class="justify-content-center card m-auto w-75">
+
+    <div class="card-body">
+      <h5 class="card-title">Welcome To Super Team Picker</h5>
+      <ul class="list-group list-group-flush mt-4">
+        <p class="card-text"><strong>Here you will be able to:</strong></p>
+        <li class="list-group-item">Create teams with matching logos</li>
+        <li class="list-group-item">Sperate teams by team size or by number of teams</li>
+        <li class="list-group-item">Delete and modify existing teams</li>
+      </ul>
+      <p class="card-text mt-4"><strong><%-username ? `Hello, ${username}! You may now proceed with your changes :)` : "Please enter a username for access to features" %></strong>
+    </div>
+    <% if (username) { %>
+      <div>
+        <p class="card-text mx-3">Please sign out when done!</p>
+      </div>
+      <form class="mx-3" action="/sign_out" method="POST">
+        <button type="submit" class="btn btn-primary my-3">Sign Out</button>
+      </form>
+<% } else { %>
+    <form class="mx-3" action="/sign_in" method="POST">
+      <div class="form-group">
+
+        <input type="text" class="form-control" name="username" placeholder="Username">
+      </div>
+      <button type="submit" class="my-3 btn btn-primary">Sign in</button>
+    </form>
+    <% } %>
+    <div class="height">
+    </div>
+  </div>

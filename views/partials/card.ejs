@@ -1,0 +1,14 @@
+<% for( let cohort of cohorts) { %>
+  <div class="card m-3">
+    <div class="card-body">
+      <div class="d-flex">
+        <h4 class="card-title">
+          <img src="<%-cohort.image_url%> " class="img" alt="<%-cohort.team_name%>">
+          <%-cohort.team_name%>
+        </h4>
+      </div>
+      <p class="card-text"><%-cohort.members%></p>
+      <a href="/super_team_picker/<%-cohort.id%>" class="btn btn-primary">Show cohort</a>
+    </div>
+  </div>
+<% } %>
